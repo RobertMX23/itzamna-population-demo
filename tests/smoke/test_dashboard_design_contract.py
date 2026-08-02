@@ -22,7 +22,7 @@ def test_dashboard_has_required_semantic_regions() -> None:
 
 def test_dashboard_design_contract_preserves_responsive_layout() -> None:
     required_css = [
-        ".shell { max-width:",
+        ".shell { width: min(100% - 48px, 1520px);",
         ".toolbar { grid-template-columns: repeat(2",
         ".metrics { grid-template-columns: repeat(3",
         ".grid { grid-template-columns: 1.4fr 1fr",
