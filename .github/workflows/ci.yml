@@ -24,6 +24,8 @@ jobs:
         run: python scripts/load_population_sqlite.py data/processed/population_observations.csv data/processed/population.sqlite3 queries/schema.sql
       - name: Run SQL analysis queries
         run: python scripts/run_population_queries.py data/processed/population.sqlite3 docs/analysis/population_sql_report.json
+      - name: Generate EDA report
+        run: python scripts/generate_population_eda.py data/processed/population.sqlite3 docs/analysis/population_profile.json docs/analysis/population_eda.md
       - name: Run tests
         run: python -m pytest -q
       - name: Install E2E dependencies
