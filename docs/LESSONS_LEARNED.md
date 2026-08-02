@@ -33,3 +33,18 @@ workflow before merging.
 Warnings from an upstream action are not fixed by downgrading the runner. We
 first verify whether the warning is explicit project configuration, an action
 runtime, or a real execution failure.
+
+## CI/CD DO NOT
+
+- Do not set `ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true` to hide the Node
+  20 warning.
+- Do not downgrade the runner to Node 20.
+- Do not place a GitHub PAT, INEGI token, or any secret in the repository,
+  README, workflow source, or commit history.
+- Do not use `enablement: true` in the Pages workflow unless the token has
+  repository administration permission; enable Pages in repository settings
+  or provision it with a properly scoped administrative token.
+- Do not treat a green CI check as proof that Pages is configured; validate
+  the deployment job and the published URL separately.
+- Do not replace a working dashboard or data layer to resolve a deployment
+  warning unrelated to application code.
