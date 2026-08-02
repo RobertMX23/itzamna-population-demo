@@ -6,6 +6,7 @@ HTML = (PROJECT_ROOT / "dashboard" / "index.html").read_text(encoding="utf-8")
 CSS = (PROJECT_ROOT / "dashboard" / "styles.css").read_text(encoding="utf-8")
 LANDING_HTML = (PROJECT_ROOT / "index.html").read_text(encoding="utf-8")
 LANDING_CSS = (PROJECT_ROOT / "landing.css").read_text(encoding="utf-8")
+CSS_INTELLIGENCE = (PROJECT_ROOT / "governance" / "css-design-intelligence.yaml").read_text(encoding="utf-8")
 
 
 def test_dashboard_has_required_semantic_regions() -> None:
@@ -63,3 +64,15 @@ def test_landing_design_contract_preserves_executive_entrypoint() -> None:
         "@media (prefers-reduced-motion: reduce)",
     ]:
         assert rule in LANDING_CSS, f"Missing landing design rule: {rule}"
+
+
+def test_css_design_intelligence_is_versioned() -> None:
+    for marker in [
+        'version: "1.0"',
+        "explicit-component-spacing",
+        "no-overflow-hiding",
+        "responsive-contract",
+        "reduced-motion",
+        "failure_behavior:",
+    ]:
+        assert marker in CSS_INTELLIGENCE, f"Missing CSS intelligence rule: {marker}"

@@ -10,6 +10,7 @@ calidad de software.
 - [Abrir sitio publico](https://robertmx23.github.io/itzamna-population-demo/)
 - [Abrir dashboard](https://robertmx23.github.io/itzamna-population-demo/dashboard/)
 - [Lessons learned](docs/LESSONS_LEARNED.md)
+- [CSS design intelligence](governance/css-design-intelligence.yaml)
 
 El sitio se publica con GitHub Pages mediante el workflow
 [`deploy-pages`](.github/workflows/pages.yml). El workflow [`ci`](.github/workflows/ci.yml)

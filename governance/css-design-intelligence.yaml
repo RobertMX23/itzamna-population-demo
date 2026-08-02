@@ -1,0 +1,113 @@
+version: "1.0"
+name: itzamna-css-design-intelligence
+purpose: >-
+  Convertir decisiones visuales del proyecto en reglas recuperables y
+  verificables para generar CSS consistente con el estilo Itzamna.
+
+profile:
+  visual_language: "analytical editorial"
+  priorities:
+    - clarity
+    - information_density
+    - responsive_layout
+    - accessibility
+    - restrained_motion
+  avoid:
+    - decorative_space_without_function
+    - oversized_titles_in_data_views
+    - hidden_overflow_as_a_layout_fix
+    - arbitrary_spacing_values
+
+tokens:
+  colors:
+    ink: "#17324a"
+    muted: "#607985"
+    accent: "#c75d3e"
+    background: "#eef3f1"
+    surface: "#fffdf8"
+    line: "#cbd9d5"
+  spacing:
+    page_inline: "clamp(16px, 2.4vw, 36px)"
+    component_gap: "clamp(16px, 2.4vw, 36px)"
+    panel_padding: "20px"
+    compact_panel_padding: "16px"
+    section_padding_block: "clamp(18px, 3vw, 32px)"
+  typography:
+    display: "Georgia, Times New Roman, serif"
+    interface: "Arial, sans-serif"
+    dashboard_title: "clamp(42px, 5vw, 76px)"
+    landing_title: "clamp(44px, 5.2vw, 78px)"
+
+layouts:
+  page:
+    max_width: "1520px"
+    width_rule: "width: min(100% - 48px, 1520px)"
+  landing_hub:
+    structure: [header, intro, project_grid, footer]
+    project_columns: 3
+    mobile_breakpoint: "760px"
+  dashboard:
+    structure: [header, toolbar, metrics, analytical_grid, footer]
+    analytical_columns: "1.4fr 1fr"
+    mobile_breakpoint: "760px"
+
+rules:
+  - id: css-001
+    name: explicit-component-spacing
+    severity: error
+    rule: "Data panels must override generic article spacing with an explicit .panel padding."
+    rationale: "Prevents inherited padding from making charts and rankings unnecessarily tall."
+    example: ".panel { padding: 20px; }"
+  - id: css-002
+    name: compact-chart-canvas
+    severity: warning
+    rule: "Chart canvas should use compact vertical padding and preserve readable labels."
+    target: ".chart"
+    preferred: "padding: 22px 8px 0"
+  - id: css-003
+    name: no-overflow-hiding
+    severity: error
+    rule: "Do not use overflow-x: hidden to conceal layout defects."
+  - id: css-004
+    name: responsive-contract
+    severity: error
+    rule: "Every grid must collapse or reflow at the project's mobile breakpoint."
+  - id: css-005
+    name: reduced-motion
+    severity: error
+    rule: "Animated interfaces must include prefers-reduced-motion handling."
+  - id: css-006
+    name: hierarchy-before-decoration
+    severity: warning
+    rule: "A title, filter, KPI, chart, or ranking must have an information role before visual decoration is added."
+
+qa:
+  static_checks:
+    - no-overflow-hiding
+    - explicit-component-spacing
+    - responsive-contract
+    - reduced-motion
+  browser_checks:
+    viewports: [390, 768, 1440, 1920]
+    zoom_levels: [100, 200]
+    assertions:
+      - no_horizontal_scroll
+      - primary_controls_visible
+      - cards_have_consistent_height
+      - chart_labels_remain_readable
+  failure_behavior:
+    ci: fail
+    message: "CSS design intelligence contract violated; review the affected rule before merge."
+
+llm_context:
+  retrieval_order:
+    - governance/css-design-intelligence.yaml
+    - docs/LESSONS_LEARNED.md
+    - dashboard/styles.css
+    - landing.css
+    - tests/smoke/test_dashboard_design_contract.py
+  generation_prompt: >-
+    Before generating CSS, inspect the design intelligence rules. Preserve the
+    analytical-editorial language, use existing tokens, prefer explicit
+    component spacing, keep layouts responsive, and explain any intentional
+    deviation from the contract.
