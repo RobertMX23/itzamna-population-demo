@@ -1,0 +1,71 @@
+{
+  "dataset": "project-01-population-fixture",
+  "source_type": "synthetic",
+  "notice": "Datos ficticios para pruebas y demostracion; no representan cifras oficiales.",
+  "metadata": {
+    "FREQ": "quinquenal",
+    "TOPIC": "123",
+    "UNIT": "188",
+    "UNIT_LABEL": "Personas",
+    "SOURCE": "synthetic-fixture",
+    "LASTUPDATE": "2026-01-01",
+    "STATUS": "test"
+  },
+  "geographies": [
+    {"geo_area": "01", "geo_name": "Entidad Norte"},
+    {"geo_area": "02", "geo_name": "Entidad Centro"},
+    {"geo_area": "03", "geo_name": "Entidad Sur"}
+  ],
+  "indicators": [
+    {
+      "indicator_id": "P01-POP-TOTAL",
+      "indicator_name": "Poblacion total",
+      "unit": "188",
+      "unit_label": "Personas",
+      "topic": "123",
+      "topic_label": "Poblacion",
+      "observations": [
+        {"geo_area": "01", "time_period": "2016", "value": 1000000},
+        {"geo_area": "01", "time_period": "2017", "value": 1020000},
+        {"geo_area": "01", "time_period": "2018", "value": 1045000},
+        {"geo_area": "01", "time_period": "2019", "value": 1070000},
+        {"geo_area": "01", "time_period": "2020", "value": 1100000},
+        {"geo_area": "02", "time_period": "2016", "value": 900000},
+        {"geo_area": "02", "time_period": "2017", "value": 897000},
+        {"geo_area": "02", "time_period": "2018", "value": 895000},
+        {"geo_area": "02", "time_period": "2019", "value": 900000},
+        {"geo_area": "02", "time_period": "2020", "value": 910000},
+        {"geo_area": "03", "time_period": "2016", "value": 700000},
+        {"geo_area": "03", "time_period": "2017", "value": 705000},
+        {"geo_area": "03", "time_period": "2018", "value": 712000},
+        {"geo_area": "03", "time_period": "2019", "value": 709000},
+        {"geo_area": "03", "time_period": "2020", "value": 715000}
+      ]
+    },
+    {
+      "indicator_id": "P01-POP-MEN",
+      "indicator_name": "Poblacion masculina",
+      "unit": "188",
+      "unit_label": "Personas",
+      "topic": "123",
+      "topic_label": "Poblacion",
+      "observations": [
+        {"geo_area": "01", "time_period": "2016", "value": 490000},
+        {"geo_area": "01", "time_period": "2017", "value": 499000},
+        {"geo_area": "01", "time_period": "2018", "value": 511000},
+        {"geo_area": "01", "time_period": "2019", "value": 523000},
+        {"geo_area": "01", "time_period": "2020", "value": 538000},
+        {"geo_area": "02", "time_period": "2016", "value": 440000},
+        {"geo_area": "02", "time_period": "2017", "value": 438000},
+        {"geo_area": "02", "time_period": "2018", "value": 437000},
+        {"geo_area": "02", "time_period": "2019", "value": 440000},
+        {"geo_area": "02", "time_period": "2020", "value": 445000},
+        {"geo_area": "03", "time_period": "2016", "value": 342000},
+        {"geo_area": "03", "time_period": "2017", "value": 345000},
+        {"geo_area": "03", "time_period": "2018", "value": 349000},
+        {"geo_area": "03", "time_period": "2019", "value": 347000},
+        {"geo_area": "03", "time_period": "2020", "value": 350000}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project 01 | Population Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <p class="eyebrow">ITZAMNA / PROJECT 01</p>
+        <h1>Population dashboard</h1>
+        <p class="intro">Una lectura descriptiva de poblacion por entidad y periodo.</p>
+      </header>
+      <section class="toolbar" aria-label="Filtros del dashboard">
+        <label>Indicador<select id="indicator"></select></label>
+        <label>Entidad<select id="geography"></select></label>
+      </section>
+      <section class="metrics" aria-label="Metricas principales">
+        <article><span>Ultimo valor</span><strong id="latest-value">--</strong><small id="latest-period">--</small></article>
+        <article><span>Cambio porcentual</span><strong id="change-value">--</strong><small>vs. periodo anterior</small></article>
+        <article><span>Observaciones</span><strong id="observation-count">--</strong><small>en la seleccion</small></article>
+      </section>
+      <section class="grid">
+        <article class="panel"><div class="panel-heading"><h2>Serie temporal</h2><span id="series-note">--</span></div><div id="chart" class="chart" role="img" aria-label="Serie temporal de poblacion"></div></article>
+        <article class="panel"><div class="panel-heading"><h2>Ranking 2020</h2><span>Mayor a menor</span></div><ol id="ranking" class="ranking"></ol></article>
+      </section>
+      <footer>Datos sinteticos para demostracion tecnica. No representan cifras oficiales de INEGI.</footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
