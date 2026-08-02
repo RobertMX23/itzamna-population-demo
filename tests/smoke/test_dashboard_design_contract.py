@@ -23,6 +23,11 @@ def test_dashboard_has_required_semantic_regions() -> None:
         assert marker in HTML, f"Missing design region: {marker}"
 
 
+def test_dashboard_labels_observation_metric_as_included_periods() -> None:
+    assert "<span>Periodos incluidos</span>" in HTML
+    assert "<span>Observaciones</span>" not in HTML
+
+
 def test_dashboard_design_contract_preserves_responsive_layout() -> None:
     required_css = [
         ".shell { width: min(100% - 48px, 1520px);",
