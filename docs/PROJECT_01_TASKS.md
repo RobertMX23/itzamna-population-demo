@@ -7,7 +7,8 @@
 | DA-01 | Definir y validar contrato del dataset | Validador Python y pruebas | En curso |
 | DA-02 | Perfilar el dataset | Reporte de filas, tipos, nulos y rangos | Completada |
 | DA-03 | Normalizar observaciones | Tabla analitica limpia | Completada |
-| DA-04 | Cargar SQLite | Base reproducible y esquema SQL | En curso |
+| DA-04 | Cargar SQLite | Base reproducible y esquema SQL | Completada |
+| DA-05 | Consultar con SQL | Consultas de resumen y ranking | En curso |
 | DA-05 | Consultar con SQL | Consultas de resumen y ranking | Pendiente |
 | DA-06 | Crear EDA | Notebook o reporte reproducible | Pendiente |
 | DA-07 | Integrar filtros de periodo | Dashboard actualizado | Pendiente |
@@ -21,5 +22,5 @@ causalidad, scraping de HTML ni credenciales de produccion.
 
 ## Tarea actual: DA-04
 
-La tabla plana se genera en `data/processed/population_observations.csv`. La
-siguiente tarea es cargar esta tabla a SQLite y definir el esquema analitico.
+La tabla plana se carga con `scripts/load_population_sqlite.py` usando
+`queries/schema.sql`. La base local queda excluida del repositorio publico.
