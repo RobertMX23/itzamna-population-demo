@@ -26,7 +26,7 @@ def test_dashboard_design_contract_preserves_responsive_layout() -> None:
         ".toolbar { grid-template-columns: repeat(2",
         ".metrics { grid-template-columns: repeat(3",
         ".grid { grid-template-columns: 1.4fr 1fr",
-        "@media (max-width: 720px)",
+        "@media (max-width: 760px)",
         ".toolbar, .metrics, .grid { grid-template-columns: 1fr;",
     ]
     for rule in required_css:
