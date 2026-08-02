@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   quality:
     runs-on: ubuntu-latest
@@ -29,8 +32,24 @@ jobs:
       - name: Run tests
         run: python -m pytest -q
       - name: Install E2E dependencies
-        run: npm install
+        run: npm ci
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
+      - name: Validate dashboard JavaScript syntax
+        run: node --check dashboard/app.js
       - name: Run dashboard E2E tests
         run: npm run test:e2e
+      - name: Upload analysis evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-01-analysis-evidence
+          path: |
+            docs/analysis/population_profile.json
+            docs/analysis/population_sql_report.json
+            docs/analysis/population_eda.md
+            docs/analysis/population_insights.md
+          if-no-files-found: error

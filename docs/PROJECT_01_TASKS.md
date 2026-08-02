@@ -12,15 +12,16 @@
 | DA-06 | Crear EDA | Notebook o reporte reproducible | Completada |
 | DA-07 | Integrar filtros de periodo | Dashboard actualizado | Completada |
 | DA-08 | Redactar insights | Hallazgos, limites y preguntas | Completada |
-| DA-09 | Automatizar QA | CI con contrato, EDA y smoke tests | En curso |
+| DA-09 | Automatizar QA | CI con contrato, EDA y smoke tests | Completada |
+| DA-10 | Preparar entrega | README, evidencia y retrospectiva | En curso |
 
 ## Regla de alcance
 
 El proyecto demuestra analisis descriptivo junior. No incluye prediccion,
 causalidad, scraping de HTML ni credenciales de produccion.
 
-## Tarea actual: DA-09
+## Tarea actual: DA-10
 
-Los insights se documentan en `docs/analysis/population_insights.md`, con
-evidencia, formulas, interpretacion y limitaciones. La siguiente tarea es
-consolidar el quality gate completo en CI.
+El quality gate ejecuta contrato, perfilado, normalizacion, SQLite, SQL, EDA,
+pytest, sintaxis JavaScript y E2E. Tambien conserva reportes analiticos como
+artefacto de cada corrida. La siguiente tarea es preparar la entrega final.
