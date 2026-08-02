@@ -3,43 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Itzamna: demo de exploracion de indicadores sinteticos de poblacion.">
+  <meta name="description" content="Itzamna: hub de proyectos de inteligencia de datos.">
   <meta name="theme-color" content="#17324a">
-  <title>Itzamna | Population Demo</title>
+  <title>Itzamna | Data Intelligence Projects</title>
   <link rel="stylesheet" href="landing.css">
 </head>
 <body>
-  <main class="landing-shell">
-    <p class="eyebrow">ITZAMNA / DATA INTELLIGENCE</p>
-    <section class="hero" aria-labelledby="page-title">
+  <main class="hub-shell">
+    <header class="site-header">
       <div>
-        <h1 id="page-title">Population<br>indicator demo</h1>
-        <p class="lede">Una vista limpia para explorar indicadores por entidad y periodo.</p>
-        <div class="actions">
-          <a class="button" href="dashboard/">Abrir dashboard <span aria-hidden="true">-&gt;</span></a>
-          <a class="text-link" href="https://github.com/RobertMX23/itzamna-population-demo">Ver repositorio</a>
-        </div>
+        <p class="eyebrow">ITZAMNA / DATA INTELLIGENCE</p>
+        <h1>Projects that turn official data into decisions.</h1>
       </div>
-      <aside class="signal-card" aria-label="Alcance del demo">
-        <span class="signal-dot" aria-hidden="true"></span>
-        <strong>Demo portfolio</strong>
-        <p>Datos sintéticos. Sin secretos. Sin conexión de producción.</p>
-      </aside>
+      <div class="header-meta">
+        <span>Portfolio lab</span>
+        <span>2026</span>
+      </div>
+    </header>
+
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <p class="section-label">PROJECT HUB</p>
+        <h2 id="intro-title">Explora el trabajo por problema, datos y nivel de profundidad.</h2>
+      </div>
+      <p class="intro-copy">Una coleccion de proyectos pequenos y reproducibles para catalogar, analizar y visualizar indicadores publicos.</p>
     </section>
-    <section class="evidence" aria-label="Evidencia del proyecto">
-      <article><strong>01</strong><span>Demo publico</span><p>Experiencia navegable para portafolio.</p></article>
-      <article><strong>02</strong><span>Datos sinteticos</span><p>Sin credenciales ni conexion productiva.</p></article>
-      <article><strong>03</strong><span>QA automatizado</span><p>Pruebas y despliegue reproducibles.</p></article>
-    </section>
-    <section class="principles" aria-labelledby="principles-title">
-      <h2 id="principles-title">Qué demuestra</h2>
-      <div class="principle-grid">
-        <article><strong>01</strong><span>Catálogo</span><p>Indicadores con contexto y trazabilidad.</p></article>
-        <article><strong>02</strong><span>Exploración</span><p>Filtros simples para encontrar señales.</p></article>
-        <article><strong>03</strong><span>Calidad</span><p>Proyecto reproducible y verificable.</p></article>
+
+    <section class="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="section-label">ROADMAP</p>
+        <h2 id="projects-title">Tres caminos para explorar</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card project-card--active">
+          <div class="card-top"><span class="project-number">01</span><span class="status">Live demo</span></div>
+          <h3>Poblacion</h3>
+          <p>Dashboard descriptivo para comparar poblacion por entidad y periodo.</p>
+          <div class="card-footer"><span>Filtros · tendencia · ranking</span><a href="dashboard/">Abrir proyecto <span aria-hidden="true">-&gt;</span></a></div>
+        </article>
+        <article class="project-card">
+          <div class="card-top"><span class="project-number">02</span><span class="status status--planned">Planned</span></div>
+          <h3>Educacion</h3>
+          <p>Exploracion de escolaridad, cobertura y diferencias territoriales.</p>
+          <div class="card-footer"><span>Catalogo · comparacion · contexto</span><span class="coming-soon">En preparacion</span></div>
+        </article>
+        <article class="project-card">
+          <div class="card-top"><span class="project-number">03</span><span class="status status--planned">Planned</span></div>
+          <h3>Salud</h3>
+          <p>Lectura de indicadores de salud con foco en cobertura y evolucion.</p>
+          <div class="card-footer"><span>Calidad · tendencia · señales</span><span class="coming-soon">En preparacion</span></div>
+        </article>
       </div>
     </section>
-    <footer>Itzamna Population Demo · Proyecto educativo y de portafolio</footer>
+
+    <footer class="site-footer"><span>Datos sinteticos · Sin secretos · Sin conexion de produccion</span><a href="https://github.com/RobertMX23/itzamna-population-demo">Ver repositorio <span aria-hidden="true">-&gt;</span></a></footer>
   </main>
 </body>
 </html>

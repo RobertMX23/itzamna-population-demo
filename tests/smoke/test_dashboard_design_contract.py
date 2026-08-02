@@ -43,17 +43,21 @@ def test_dashboard_design_contract_avoids_horizontal_overflow() -> None:
 
 def test_landing_design_contract_preserves_executive_entrypoint() -> None:
     for marker in [
-        '<main class="landing-shell">',
+        '<main class="hub-shell">',
         'href="dashboard/"',
         'href="https://github.com/RobertMX23/itzamna-population-demo"',
-        'class="evidence"',
+        'class="site-header"',
+        'class="project-grid"',
+        'class="project-card project-card--active"',
+        'class="status status--planned"',
     ]:
         assert marker in LANDING_HTML, f"Missing landing region: {marker}"
 
     for rule in [
-        ".landing-shell { width: min(100% - 48px, 1520px);",
-        ".hero { display: grid;",
-        "@media (max-width: 760px)",
+        ".hub-shell { width: min(100% - 64px, 1600px);",
+        ".site-header { display: flex;",
+        ".project-grid { display: grid;",
+        "@media (max-width: 800px)",
         "@media (prefers-reduced-motion: reduce)",
     ]:
         assert rule in LANDING_CSS, f"Missing landing design rule: {rule}"
