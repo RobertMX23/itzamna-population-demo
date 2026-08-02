@@ -28,6 +28,8 @@ def test_dashboard_design_contract_preserves_responsive_layout() -> None:
         ".toolbar { grid-template-columns: repeat(2",
         ".metrics { grid-template-columns: repeat(3",
         ".grid { grid-template-columns: 1.4fr 1fr",
+        ".panel { min-width: 0; min-height: 390px; padding: 20px; }",
+        ".chart { min-height: 270px;",
         "@media (max-width: 760px)",
         ".toolbar, .metrics, .grid { grid-template-columns: 1fr;",
     ]
