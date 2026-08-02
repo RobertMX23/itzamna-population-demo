@@ -71,11 +71,15 @@ def test_landing_design_contract_preserves_executive_entrypoint() -> None:
 
 def test_css_design_intelligence_is_versioned() -> None:
     for marker in [
-        'version: "1.0"',
+        'version: "1.1"',
         "explicit-component-spacing",
         "no-overflow-hiding",
         "responsive-contract",
         "reduced-motion",
+        'dashboard_grid_gap: "20px"',
+        'metrics_card_min_height: "104px"',
+        'panel_min_height: "330px"',
+        'article_padding: "clamp(14px, 1.5vw, 22px)"',
         "failure_behavior:",
     ]:
         assert marker in CSS_INTELLIGENCE, f"Missing CSS intelligence rule: {marker}"
