@@ -1,0 +1,59 @@
+version: "1.0"
+name: project-01-junior-data-analyst-rules
+purpose: >-
+  Definir el nivel de trabajo esperado para analizar el fixture de poblacion
+  sin convertir el demo en una plataforma de produccion.
+
+scope:
+  level: junior
+  allowed:
+    - API consumption
+    - JSON and CSV handling
+    - basic SQL
+    - data validation
+    - exploratory data analysis
+    - descriptive metrics
+    - dashboard communication
+  out_of_scope:
+    - machine learning
+    - causal inference
+    - production credentials
+    - scraping when an official API exists
+    - distributed data engineering
+
+clean_code:
+  naming: "Use descriptive snake_case in Python and explicit field names in data."
+  functions: "Prefer small pure functions with one analytical responsibility."
+  comments: "Comment why a validation or transformation exists, not what syntax does."
+  errors: "Fail with actionable messages; never silently discard observations."
+  reproducibility: "Every derived metric must have a documented formula."
+
+clean_architecture:
+  layers:
+    domain: "Data rules and validation concepts; no filesystem or HTTP."
+    application: "Use cases that orchestrate extraction, validation and analysis."
+    infrastructure: "API clients, JSON files, SQLite and external systems."
+    interfaces: "CLI, dashboard and reports."
+  dependency_rule: "Outer layers may depend on inner layers, never the reverse."
+
+data_contract:
+  required: [dataset, source_type, metadata, geographies, indicators]
+  observation_keys: [geo_area, time_period, value]
+  rules:
+    - "geo_area remains text to preserve leading zeros."
+    - "value must be numeric and finite."
+    - "Every observation references a known geography."
+    - "Derived metrics are clearly labeled as calculated."
+    - "Synthetic public data must never be presented as official data."
+
+quality_gate:
+  must_pass:
+    - dataset_contract_validation
+    - unit_tests
+    - smoke_tests
+    - no_secrets_in_public_repo
+  review_questions:
+    - "What question does this analysis answer?"
+    - "What is the source and extraction date?"
+    - "What cleaning decisions were made?"
+    - "What limitations prevent a stronger conclusion?"

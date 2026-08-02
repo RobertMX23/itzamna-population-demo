@@ -14,6 +14,8 @@ jobs:
           python-version: "3.13"
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Validate population dataset contract
+        run: python scripts/validate_population_dataset.py data/synthetic/catalog.json
       - name: Run tests
         run: python -m pytest -q
       - name: Install E2E dependencies
