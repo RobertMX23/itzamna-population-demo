@@ -48,3 +48,10 @@ runtime, or a real execution failure.
   the deployment job and the published URL separately.
 - Do not replace a working dashboard or data layer to resolve a deployment
   warning unrelated to application code.
+
+## Design QA contract
+
+The dashboard smoke suite treats the visual composition as a product
+contract. It protects the semantic regions, the desktop grid, the mobile
+breakpoint, and the no-overflow rule. A missing or altered rule fails CI and
+creates a visible failed check before the change can be considered ready.

@@ -23,6 +23,7 @@ Este demo muestra un flujo reproducible para:
 - Explorar una serie historica de poblacion.
 - Aplicar filtros y consultar un ranking comparativo.
 - Validar el comportamiento con pruebas automatizadas.
+- Proteger la composicion responsive con un contrato de QA de diseno.
 
 El alcance es intencionalmente pequeno: sirve como evidencia tecnica y
 visual, no como sustituto de una plataforma de produccion.
