@@ -31,6 +31,8 @@ def test_dashboard_design_contract_preserves_responsive_layout() -> None:
         ".grid { grid-template-columns: 1.4fr 1fr",
         ".panel { min-width: 0; min-height: 390px; padding: 20px; }",
         ".chart { min-height: 270px;",
+        ".metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 12px; }",
+        ".metrics article { min-height: 104px; padding: 16px 20px; }",
         "@media (max-width: 760px)",
         ".toolbar, .metrics, .grid { grid-template-columns: 1fr;",
     ]
