@@ -8,7 +8,8 @@
 | DA-02 | Perfilar el dataset | Reporte de filas, tipos, nulos y rangos | Completada |
 | DA-03 | Normalizar observaciones | Tabla analitica limpia | Completada |
 | DA-04 | Cargar SQLite | Base reproducible y esquema SQL | Completada |
-| DA-05 | Consultar con SQL | Consultas de resumen y ranking | En curso |
+| DA-05 | Consultar con SQL | Consultas de resumen y ranking | Completada |
+| DA-06 | Crear EDA | Notebook o reporte reproducible | En curso |
 | DA-05 | Consultar con SQL | Consultas de resumen y ranking | Pendiente |
 | DA-06 | Crear EDA | Notebook o reporte reproducible | Pendiente |
 | DA-07 | Integrar filtros de periodo | Dashboard actualizado | Pendiente |
@@ -22,5 +23,6 @@ causalidad, scraping de HTML ni credenciales de produccion.
 
 ## Tarea actual: DA-04
 
-La tabla plana se carga con `scripts/load_population_sqlite.py` usando
-`queries/schema.sql`. La base local queda excluida del repositorio publico.
+Las consultas descriptivas se documentan en `queries/population_analysis.sql` y
+se ejecutan con `scripts/run_population_queries.py`. La siguiente tarea es
+crear el reporte EDA reproducible.
