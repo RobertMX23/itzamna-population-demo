@@ -11,15 +11,16 @@
 | DA-05 | Consultar con SQL | Consultas de resumen y ranking | Completada |
 | DA-06 | Crear EDA | Notebook o reporte reproducible | Completada |
 | DA-07 | Integrar filtros de periodo | Dashboard actualizado | Completada |
-| DA-08 | Redactar insights | Hallazgos, limites y preguntas | En curso |
-| DA-09 | Automatizar QA | CI con contrato, EDA y smoke tests | Pendiente |
+| DA-08 | Redactar insights | Hallazgos, limites y preguntas | Completada |
+| DA-09 | Automatizar QA | CI con contrato, EDA y smoke tests | En curso |
 
 ## Regla de alcance
 
 El proyecto demuestra analisis descriptivo junior. No incluye prediccion,
 causalidad, scraping de HTML ni credenciales de produccion.
 
-## Tarea actual: DA-08
+## Tarea actual: DA-09
 
-El dashboard ahora filtra la ventana temporal y actualiza metricas, serie y
-ranking. La siguiente tarea es redactar insights y preguntas de seguimiento.
+Los insights se documentan en `docs/analysis/population_insights.md`, con
+evidencia, formulas, interpretacion y limitaciones. La siguiente tarea es
+consolidar el quality gate completo en CI.
