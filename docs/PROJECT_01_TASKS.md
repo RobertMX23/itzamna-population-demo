@@ -5,7 +5,7 @@
 | ID | Tarea | Entregable | Estado |
 |---|---|---|---|
 | DA-01 | Definir y validar contrato del dataset | Validador Python y pruebas | En curso |
-| DA-02 | Perfilar el dataset | Reporte de filas, tipos, nulos y rangos | Pendiente |
+| DA-02 | Perfilar el dataset | Reporte de filas, tipos, nulos y rangos | Completada |
 | DA-03 | Normalizar observaciones | Tabla analitica limpia | Pendiente |
 | DA-04 | Cargar SQLite | Base reproducible y esquema SQL | Pendiente |
 | DA-05 | Consultar con SQL | Consultas de resumen y ranking | Pendiente |
@@ -19,7 +19,7 @@
 El proyecto demuestra analisis descriptivo junior. No incluye prediccion,
 causalidad, scraping de HTML ni credenciales de produccion.
 
-## Tarea actual: DA-01
+## Tarea actual: DA-02
 
-Se valida el fixture publico antes de analizarlo. El validador debe devolver
-errores accionables y no modificar el archivo de entrada.
+El perfilador genera un reporte descriptivo reproducible sin modificar el
+archivo de entrada. La siguiente tarea es normalizar las observaciones.

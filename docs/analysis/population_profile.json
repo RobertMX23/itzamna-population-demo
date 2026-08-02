@@ -1,0 +1,35 @@
+{
+  "dataset": "project-01-population-fixture",
+  "source_type": "synthetic",
+  "geography_count": 3,
+  "indicator_count": 2,
+  "observation_count": 30,
+  "observation_fields": [
+    "geo_area",
+    "time_period",
+    "value"
+  ],
+  "null_counts": {
+    "geo_area": 0,
+    "time_period": 0,
+    "value": 0
+  },
+  "duplicate_geo_period_rows": 0,
+  "periods": [
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020"
+  ],
+  "period_count": 5,
+  "value_range": {
+    "min": 342000,
+    "max": 1100000
+  },
+  "observations_by_geography": {
+    "01": 10,
+    "02": 10,
+    "03": 10
+  }
+}
