@@ -10,6 +10,7 @@ test.describe("INEGI population dashboard", () => {
     await expect(page.locator(".grid")).toBeVisible();
     await expect(page.locator(".metrics article")).toHaveCount(3);
     await expect(page.locator(".panel")).toHaveCount(2);
+    await expect(page.locator("#period")).toBeVisible();
   });
 
   test("preserves the compact spacing contract", async ({ page }) => {
@@ -36,5 +37,13 @@ test.describe("INEGI population dashboard", () => {
     await page.goto("/dashboard/");
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
     expect(overflow).toBe(false);
+  });
+
+  test("filters the analytical window by period", async ({ page }) => {
+    await page.goto("/dashboard/");
+    await page.locator("#period").selectOption("2018");
+    await expect(page.locator("#latest-period")).toHaveText("2018");
+    await expect(page.locator("#ranking-title")).toHaveText("Ranking 2018");
+    await expect(page.locator("#observation-count")).toHaveText("3");
   });
 });

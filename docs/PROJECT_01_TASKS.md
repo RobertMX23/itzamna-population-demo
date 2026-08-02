@@ -10,11 +10,8 @@
 | DA-04 | Cargar SQLite | Base reproducible y esquema SQL | Completada |
 | DA-05 | Consultar con SQL | Consultas de resumen y ranking | Completada |
 | DA-06 | Crear EDA | Notebook o reporte reproducible | Completada |
-| DA-07 | Integrar filtros de periodo | Dashboard actualizado | En curso |
-| DA-05 | Consultar con SQL | Consultas de resumen y ranking | Pendiente |
-| DA-06 | Crear EDA | Notebook o reporte reproducible | Pendiente |
-| DA-07 | Integrar filtros de periodo | Dashboard actualizado | Pendiente |
-| DA-08 | Redactar insights | Hallazgos, limites y preguntas | Pendiente |
+| DA-07 | Integrar filtros de periodo | Dashboard actualizado | Completada |
+| DA-08 | Redactar insights | Hallazgos, limites y preguntas | En curso |
 | DA-09 | Automatizar QA | CI con contrato, EDA y smoke tests | Pendiente |
 
 ## Regla de alcance
@@ -22,8 +19,7 @@
 El proyecto demuestra analisis descriptivo junior. No incluye prediccion,
 causalidad, scraping de HTML ni credenciales de produccion.
 
-## Tarea actual: DA-04
+## Tarea actual: DA-08
 
-El reporte EDA se genera con `scripts/generate_population_eda.py` y queda en
-`docs/analysis/population_eda.md`. La siguiente tarea es integrar un filtro de
-periodo en el dashboard.
+El dashboard ahora filtra la ventana temporal y actualiza metricas, serie y
+ranking. La siguiente tarea es redactar insights y preguntas de seguimiento.

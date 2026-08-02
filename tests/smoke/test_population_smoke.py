@@ -14,7 +14,7 @@ def test_population_fixture_is_readable() -> None:
 
 def test_dashboard_contains_critical_user_controls() -> None:
     html = (PROJECT_ROOT / "dashboard" / "index.html").read_text(encoding="utf-8")
-    for marker in ["id=\"indicator\"", "id=\"geography\"", "id=\"latest-value\"", "id=\"chart\"", "id=\"ranking\""]:
+    for marker in ["id=\"indicator\"", "id=\"geography\"", "id=\"period\"", "id=\"latest-value\"", "id=\"chart\"", "id=\"ranking\""]:
         assert marker in html
 
 

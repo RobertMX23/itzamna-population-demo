@@ -17,7 +17,7 @@ header { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px 36
 h1 { max-width: 900px; font-size: clamp(42px, 5vw, 76px); line-height: .92; letter-spacing: -.045em; margin: 8px 0 0; }
 .intro { max-width: 440px; margin: 0 0 4px; color: var(--muted); font: 16px/1.45 Arial, sans-serif; }
 .toolbar, .metrics, .grid { display: grid; gap: var(--space); margin-top: 28px; }
-.toolbar { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.toolbar { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 label, span, small, footer { font: 12px Arial, sans-serif; color: var(--muted); }
 label { display: grid; gap: 7px; font-weight: 700; }
 select { width: 100%; border: 1px solid #b9cbc7; border-radius: 2px; background: var(--paper); color: #17324a; padding: 13px 14px; font-size: 15px; }

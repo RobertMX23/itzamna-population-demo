@@ -16,6 +16,7 @@
       <section class="toolbar" aria-label="Filtros del dashboard">
         <label>Indicador<select id="indicator"></select></label>
         <label>Entidad<select id="geography"></select></label>
+        <label>Periodo<select id="period"><option value="all">Todos</option></select></label>
       </section>
       <section class="metrics" aria-label="Metricas principales">
         <article><span>Ultimo valor</span><strong id="latest-value">--</strong><small id="latest-period">--</small></article>
@@ -24,7 +25,7 @@
       </section>
       <section class="grid">
         <article class="panel"><div class="panel-heading"><h2>Serie temporal</h2><span id="series-note">--</span></div><div id="chart" class="chart" role="img" aria-label="Serie temporal de poblacion"></div></article>
-        <article class="panel"><div class="panel-heading"><h2>Ranking 2020</h2><span>Mayor a menor</span></div><ol id="ranking" class="ranking"></ol></article>
+        <article class="panel"><div class="panel-heading"><h2 id="ranking-title">Ranking</h2><span>Mayor a menor</span></div><ol id="ranking" class="ranking"></ol></article>
       </section>
       <footer>Datos sinteticos para demostracion tecnica. No representan cifras oficiales de INEGI.</footer>
     </main>
