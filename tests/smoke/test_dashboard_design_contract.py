@@ -4,6 +4,8 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 HTML = (PROJECT_ROOT / "dashboard" / "index.html").read_text(encoding="utf-8")
 CSS = (PROJECT_ROOT / "dashboard" / "styles.css").read_text(encoding="utf-8")
+LANDING_HTML = (PROJECT_ROOT / "index.html").read_text(encoding="utf-8")
+LANDING_CSS = (PROJECT_ROOT / "landing.css").read_text(encoding="utf-8")
 
 
 def test_dashboard_has_required_semantic_regions() -> None:
@@ -37,3 +39,21 @@ def test_dashboard_design_contract_avoids_horizontal_overflow() -> None:
     assert "overflow-x: hidden" not in CSS, (
         "Do not hide horizontal overflow to conceal a broken layout; fix the component sizing."
     )
+
+
+def test_landing_design_contract_preserves_executive_entrypoint() -> None:
+    for marker in [
+        '<main class="landing-shell">',
+        'href="dashboard/"',
+        'href="https://github.com/RobertMX23/itzamna-population-demo"',
+        'class="evidence"',
+    ]:
+        assert marker in LANDING_HTML, f"Missing landing region: {marker}"
+
+    for rule in [
+        ".landing-shell { width: min(100% - 48px, 1520px);",
+        ".hero { display: grid;",
+        "@media (max-width: 760px)",
+        "@media (prefers-reduced-motion: reduce)",
+    ]:
+        assert rule in LANDING_CSS, f"Missing landing design rule: {rule}"
