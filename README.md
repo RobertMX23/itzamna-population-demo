@@ -11,6 +11,7 @@ calidad de software.
 - [Abrir dashboard](https://robertmx23.github.io/itzamna-population-demo/dashboard/)
 - [Lessons learned](docs/LESSONS_LEARNED.md)
 - [Ficha de entrega](docs/DELIVERY.md)
+- [Artículo del portafolio](docs/PORTFOLIO_ARTICLE.md)
 - [Retrospectiva](docs/RETROSPECTIVE.md)
 - [CSS design intelligence](governance/css-design-intelligence.yaml)
 
