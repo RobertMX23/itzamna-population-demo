@@ -1,5 +1,9 @@
 name: deploy-pages
 
+env:
+  # Keep the workflow aligned with GitHub's current Actions runtime.
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     branches: [main]
